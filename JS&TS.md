@@ -30,7 +30,7 @@
 
    object :
 
-3. ### 關於框架
+## 關於框架
    1. Nestjs框架
    [Nestjs framework 30天初探](https://ithelp.ithome.com.tw/articles/10190659)
 
@@ -41,10 +41,13 @@
    1. ReactJS
 
    [React](https://zh-hant.reactjs.org/)
+   
+   2. ELECTRON
+
+   [ELECTRON](https://www.electronjs.org/docs)
 
 
-
-   ## 關於javaScript
+## 關於javaScript
 
    [Javascript 動態網頁程式設計](http://dic.vbird.tw/javascript/unit02.php)
    
@@ -60,7 +63,7 @@
 
     解惑：如果你直接在函數a里調用的話，那麼這個回調函數就被限制死了。 但是使用函數做參數就有下面的好處：當你a（b）的時候函數b就成了回調函數，而你還可以a（c）這個時候，函數c就成了回調函數。 如果你寫成了function a（）{...; b(); }就失去了變數的靈活性。
 
-    ```js
+```js
       function a(callback){   
           alert("我是parent函数a！");
           alert("調用回調函數");
@@ -80,7 +83,7 @@
           a(c);
       }
 
-    ```
+```
 
-### AJAX
+   ### AJAX
 

@@ -10,7 +10,7 @@ QWORD              => 64bit
 TBYTE              => 80bit
 
 命名方式
-[參數] [型態] [變數值] ;
+[參數名] [型態] [變數值] ;
 ex:
 a BYTE 'A';
 b BYTE  0 ;
