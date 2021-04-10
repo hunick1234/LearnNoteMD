@@ -13,21 +13,31 @@ TBYTE              => 80bit
 [參數名] [型態] [變數值] ;
 ex:
 a BYTE 'A';
+
 b BYTE  0 ;
+
 c sbyte -128; *大小寫沒有強制規定*
+
 d BYTE  ? ;  *?=>任何型態都行,但要符合記憶體大小*
 
 alist BYTE 10,20,30,15     ; 陣列
+
 mlist BYTE 10,20,30,10
       BYTE 10,20,50,12     ; 二維陣列
+      
 slist BYTE ?,22,45h,'a'    ; 只要符合記憶體大小,陣列捨麼都能放
+
 s     BYTE 'f','u','c','k' ; 
+
 str   BYTE "hello",0       ; 字串結束後要補一個0 null位元
+
 str1  BYTE "hello", 0Dh, 0Ah ; 0Dh回車,0Ah換行
 ------
 
 ### mov
+
 **mov限制**
+
 移動的位置,必須要有一個是記憶體(ex:ecx,eax,ebx......)
 
 
