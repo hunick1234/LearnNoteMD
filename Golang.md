@@ -6,6 +6,9 @@
 
    [go社區文檔](https://learnku.com/go/docs)
 
+   [Go文件操作](https://www.devdungeon.com/content/working-files-go)
+
+   [Go文件操作CN](https://mp.weixin.qq.com/s/dQUEq0lJekEUH4CHEMwANw)
 1. #### 基本
    1. array和slice
    
