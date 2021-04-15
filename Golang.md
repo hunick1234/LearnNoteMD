@@ -6,6 +6,8 @@
 
    [go社區文檔](https://learnku.com/go/docs)
 
+   [GO Package CN](https://studygolang.com/pkgdoc)
+
    [Go文件操作](https://www.devdungeon.com/content/working-files-go)
 
    [Go文件操作CN](https://mp.weixin.qq.com/s/dQUEq0lJekEUH4CHEMwANw)
@@ -55,3 +57,23 @@
       教學文
 
       [Hugo 貼身打造個人部落格](https://ithelp.ithome.com.tw/users/20106430/ironman/3613)
+
+3. #### 小坑注意
+- := 只能用於funciton內, 全域變數記得用var
+   ```go
+   var a int
+
+   c:=10  //error!! non-declaration statement outside function body
+   func main(){
+      b:=10 
+   }
+   ```
+- 全域變數沒有使用到不會報錯
+   ```go
+   var a = 10
+   func main(){
+      c:=10
+      fmt.Println(c)
+      b:=10 //b declared but not used 
+   }
+   ```
