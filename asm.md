@@ -1,5 +1,9 @@
 [組語基本指令集](https://zh.wikibooks.org/wiki/X86%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80/%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4%E9%9B%86)
 
+[Assembly Language for x86 Processors](http://www.asmirvine.com/)
+
+***!!*vs2019 設置注意,組態設定改成x86(win32),x64不支援assembly**
+
 asm 
 ```asm
 .386
