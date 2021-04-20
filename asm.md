@@ -2,6 +2,13 @@
 
 [Assembly Language for x86 Processors](http://www.asmirvine.com/)
 
+[小木偶的網頁(組語教學)](https://wanker742126.neocities.org/)
+
+[基礎講解](https://blog.xuite.net/asd.wang/alog/269346)
+
+[組語筆記](http://www2.csie.ntnu.edu.tw/~u99256/csie_share_files/Assembly_Languag/SS.pdf)
+
+[組語筆記2](http://www2.csie.ntnu.edu.tw/~u99256/csie_share_files/Assembly_Languag/Assembly%20Languag%20Note.pdf)
 ***!!*vs2019 設置注意,組態設定改成x86(win32),x64不支援assembly**
 
 asm 
@@ -23,7 +30,7 @@ invoke ExitProcess,0
 main    ENDP
 END main
 ```
-
+-----
 
 
 資料型態
@@ -54,9 +61,8 @@ ex:
 
 `alist BYTE 10,20,30,15`     ; 陣列
 
-`mlist BYTE 10,20,30,10`
-
-      `BYTE 10,20,50,12`     ; 二維陣列
+mlist BYTE 10,20,30,10<br>
+　　　BYTE 10,20,50,12     ; 二維陣列
 
 `slist BYTE ?,22,45h,'a'`    ; 只要符合記憶體大小,陣列捨麼都能放
 
@@ -71,6 +77,7 @@ ex:
 ### mov
 
 **mov限制**
+```mov eax,10```
 
 移動的位置,必須要有一個是記憶體(ex:ecx,eax,ebx......)
 
@@ -114,7 +121,7 @@ lp:
          6+6+6+6
             ||
             \/
-```
+```asm
 CODE SEGMENT				;定义代码段
 ASSUME CS:CODE,DS:DATA     ;将CS和CODE，DS和DATA段建立联系
 START: 
