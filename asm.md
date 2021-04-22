@@ -34,7 +34,7 @@ END main
 -----
 
 
-資料型態
+### 資料型態
 
 BYTE,  SBYTE       => 8bit,  *s=signed* 有號數
 
@@ -52,7 +52,7 @@ TBYTE              => 80bit
 
 ex:
 
-`` a BYTE 'A'`;
+``` a BYTE 'A'```;
 
 `b BYTE  0` ;
 
@@ -74,6 +74,42 @@ mlist BYTE 10,20,30,10<br>
 `str1  BYTE "hello", 0Dh, 0Ah` 　;0Dh回車,0Ah換行
 
 ------
+
+### Flag旗標
+
+- carry flag
+  在無號數算術運算結果的值,大於目地位址所能儲存的值時,會被設定。
+  - ex:若目的位址能儲存32位元的值，當執行232+1的運算時,CF會被設定為1。
+- ovevflow flag
+  在有號數算術運算結果的值大於或小於目地位址儲,存空間所能表示的值時，會被設定
+  - ex:
+- sing flag
+- zero flag
+
+
+------
+
+### 陣列記憶體位址儲存
+
+*ArrayA*  BYTE陣列(8
+
+|   Address    |   Value    |
+| --------     |   -------- | 
+| 0X0000000    |     1      |
+| 0X0000001    |     2      | 
+| 0X0000002    |     3      | 
+| 0X0000003    |     4      | 
+
+*ArrayB*  DWORD陣列(32
+
+|   Address    |   Value    |
+| --------     |   -------- | 
+| 0X0000000    |    FFFF0   |
+| 0X0000004    |    FFFF1   | 
+| 0X0000008    |    FFFF2   | 
+| 0X00000012   |    FFFF3   | 
+
+
 
 ### mov
 
@@ -98,25 +134,6 @@ inc a
 ```
 
 
-### 陣列記憶體位址儲存
-
-*ArrayA*  BYTE陣列(8
-
-|   Address    |   Value    |
-| --------     |   -------- | 
-| 0X0000000    |     1      |
-| 0X0000001    |     2      | 
-| 0X0000002    |     3      | 
-| 0X0000003    |     4      | 
-
-*ArrayB*  DWORD陣列(32
-
-|   Address    |   Value    |
-| --------     |   -------- | 
-| 0X0000000    |    FFFF0   |
-| 0X0000004    |    FFFF1   | 
-| 0X0000008    |    FFFF2   | 
-| 0X00000012   |    FFFF3   | 
 
 ### loop 使用
 
@@ -144,17 +161,17 @@ lp:
             ||
             \/
 ```asm
-CODE SEGMENT				;定义代码段
-ASSUME CS:CODE,DS:DATA     ;将CS和CODE，DS和DATA段建立联系
+CODE SEGMENT				   ;定義代碼段
+ASSUME CS:CODE,DS:DATA     ;將CS和CODE，DS和DATA段建立聯繫
 START: 
-       MOV AX,0            ;初始化AX,用于存储求和结果
-       MOV CX,5            ;初始化循环次数，每循环一次，CX会自动减1，
-                           ;不需要自己写代码减循环累加       
+       MOV AX,0            ;初始化AX,用於存儲求和結果
+       MOV CX,5            ;初始化循環次數，每循環一次，CX會自動減1，
+                           ;不需要自己寫代碼減循環累加       
 L:
        ADD AX,6
 LOOP L
  
-       MOV AH,4C00H         ;将控制权返回给终端。
+       MOV AH,4C00H         ;將控制權返回給終端。
        INT 21H
 CODE ENDS
 END START
