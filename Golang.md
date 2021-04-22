@@ -51,7 +51,7 @@
 
       [Gin講解](https://github.com/overnote/over-golang/blob/master/05-%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/gin-01-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.md)
 
-   1. ＨＵＧＯ
+   1.HUGO
    靜態網頁框架
 
       教學文

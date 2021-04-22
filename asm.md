@@ -2,6 +2,8 @@
 
 [Assembly Language for x86 Processors](http://www.asmirvine.com/)
 
+[asm基本](https://chucs.github.io/asm-x86-tutorial/)
+
 [小木偶的網頁(組語教學)](https://wanker742126.neocities.org/)
 
 [基礎講解](https://blog.xuite.net/asd.wang/alog/269346)
@@ -46,7 +48,7 @@ QWORD              => 64bit
 
 TBYTE              => 80bit
 
-命名方式
+變數命名方式
 
 [參數名] [型態] [變數值] ;
 
@@ -75,17 +77,31 @@ mlist BYTE 10,20,30,10<br>
 
 ------
 
-### Flag旗標
+
+
+### 暫存器
+[暫存器介紹](http://it-easy.tw/masm-class-1/2/)
+
+**暫存器位於中央處理器(CPU)內部，用來暫存指令、位址或是一些數據。暫存器的種類。**
+
+- 通用暫存器：AX、BX、CX、DX
+- 指標索引暫存器：SP、BP、SI、DI、IP
+- 區段暫存器：CS、DS、ES、SS
+ 
+- sing flag
+- zero flag
+- esi
+- edi
+
+#### Flag旗標
+旗標暫存器：Flag
 
 - carry flag
   在無號數算術運算結果的值,大於目地位址所能儲存的值時,會被設定。
-  - ex:若目的位址能儲存32位元的值，當執行232+1的運算時,CF會被設定為1。
+   - ex:若目的位址能儲存32位元的值，當執行232+1的運算時,CF會被設定為1。
 - ovevflow flag
   在有號數算術運算結果的值大於或小於目地位址儲,存空間所能表示的值時，會被設定
-  - ex:
-- sing flag
-- zero flag
-
+   - ex:
 
 ------
 
@@ -93,21 +109,21 @@ mlist BYTE 10,20,30,10<br>
 
 *ArrayA*  BYTE陣列(8
 
-|   Address    |   Value    |
-| --------     |   -------- | 
-| 0X0000000    |     1      |
-| 0X0000001    |     2      | 
-| 0X0000002    |     3      | 
-| 0X0000003    |     4      | 
+| Address   | Value |
+| --------- | ----- |
+| 0X0000000 | 1     |
+| 0X0000001 | 2     |
+| 0X0000002 | 3     |
+| 0X0000003 | 4     |
 
 *ArrayB*  DWORD陣列(32
 
-|   Address    |   Value    |
-| --------     |   -------- | 
-| 0X0000000    |    FFFF0   |
-| 0X0000004    |    FFFF1   | 
-| 0X0000008    |    FFFF2   | 
-| 0X00000012   |    FFFF3   | 
+| Address    | Value |
+| ---------- | ----- |
+| 0X0000000  | FFFF0 |
+| 0X0000004  | FFFF1 |
+| 0X0000008  | FFFF2 |
+| 0X00000012 | FFFF3 |
 
 
 
