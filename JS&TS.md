@@ -28,7 +28,7 @@
 
    any    : 任意類型 
 
-   object :
+   object : 物件
 
 ## 關於框架
    1. Nestjs框架
