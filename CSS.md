@@ -9,9 +9,9 @@
 
    [css速查](https://www.css88.com/doc/css3/quicksearch/)
 
+   **scss**
  *css設定*
  
-   **scss**
 
    ``` border-radius: 50px;``` 圓角
 
