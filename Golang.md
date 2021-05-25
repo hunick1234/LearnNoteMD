@@ -77,3 +77,19 @@
       b:=10 //b declared but not used 
    }
    ```
+- make多維陣列時
+  ```go
+	one:=make([]int,5) //output= [0,0,0,0,0]
+	
+  a:=make([][]int,5) //output= [[],[],[],[],[]] 
+	a[0][0]=5 // panic!!
+
+	a[0]=make([]int,3) //output= [[0,0,0],[],[],[],[]]
+	a[0][0]=5 				 //output= [[5,0,0],[],[],[],[]]
+
+	a[1][0]=5 // panic!!
+	fmt.Print(len(a))  // len=5
+	fmt.Print(len(a[0]))  // len=3
+	fmt.Print(len(a[1]))  // len=0
+
+  ```

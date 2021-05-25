@@ -12,6 +12,8 @@
 
 [組語筆記2](http://www2.csie.ntnu.edu.tw/~u99256/csie_share_files/Assembly_Languag/Assembly%20Languag%20Note.pdf)
 
+[組語函式講解 cn-tw](http://120.101.8.4/lyhsu/post/..%5Cdatabase%5Cgrade%5C%E7%8E%8B%E4%BF%A1%E4%BB%81%5C%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80%E8%AA%B2%E6%9C%ACCHAP05.pdf)
+
 ***!!*vs2019 設置注意,組態設定改成x86(win32),x64不支援assembly**
 
 asm 
