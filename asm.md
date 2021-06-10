@@ -15,8 +15,8 @@
 [組語函式講解 cn-tw](http://120.101.8.4/lyhsu/post/..%5Cdatabase%5Cgrade%5C%E7%8E%8B%E4%BF%A1%E4%BB%81%5C%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80%E8%AA%B2%E6%9C%ACCHAP05.pdf)
 
 ***!!*vs2019 設置注意,組態設定改成x86(win32),x64不支援assembly**
-
-asm 
+*!masm*
+asm  
 ```asm
 .386
 .model flat,stdcall
@@ -37,6 +37,7 @@ END main
 ```
 -----
 
+組語基本就是使用記憶體的操作，熟系記憶體的大小
 
 ### 資料型態
 
@@ -175,25 +176,30 @@ lp:
 
 第二步，將 ECX 與 0 比較。
 
-         6+6+6+6
-            ||
-            \/
-```asm
-CODE SEGMENT				   ;定義代碼段
-ASSUME CS:CODE,DS:DATA     ;將CS和CODE，DS和DATA段建立聯繫
-START: 
-       MOV AX,0            ;初始化AX,用於存儲求和結果
-       MOV CX,5            ;初始化循環次數，每循環一次，CX會自動減1，
-                           ;不需要自己寫代碼減循環累加       
-L:
-       ADD AX,6
-LOOP L
- 
-       MOV AH,4C00H         ;將控制權返回給終端。
-       INT 21H
-CODE ENDS
-END START
- ```
+### mov類指令
 
-### Flag計算
+- mov 目的 , 來源 
+ - 兩個運算元要一樣的大小
+ - 兩個運算元不能是記憶體單元
+ - CS , EIP 及 IP 不能是目的運算元
+ - 一個立即值不能移至區段暫存器
+ - 區段暫存器只能在 real-mode下執行
+-movzx 指令 (複製較小值到較大值，整數的補零) 
+ - movzx r32 , r/m8
+ - movzx r32 , r/m16
+ - movzx r16 , r/m8    ; 8bit來源運算元補零擴展到16bit目的運算元
+ - 只能用在無號整數
+movsx 指令 (複製較小值到較大值，符號擴展) 
+ - movzx r32 , r/m8
+ - movzx r32 , r/m16
+ - movzx r16 , r/m8  ; 低八位元複製後，取出來源最高位元，複製到目的運算元高八位元
+ - 只能用在有號整數
 
+
+### stack堆疊
+
+如過push
+
+### 運算
+- shl
+- shr
