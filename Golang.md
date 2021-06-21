@@ -81,7 +81,7 @@
   ```go
 	one:=make([]int,5) //output= [0,0,0,0,0]
 	
-  a:=make([][]int,5) //output= [[],[],[],[],[]] 
+   a:=make([][]int,5) //output= [[],[],[],[],[]] 
 	a[0][0]=5 // panic!!
 
 	a[0]=make([]int,3) //output= [[0,0,0],[],[],[],[]]
@@ -93,3 +93,10 @@
 	fmt.Print(len(a[1]))  // len=0
 
   ```
+- &* bit clear Operators運算符
+  ```go
+  a &* b 
+  1001&^1011==0000
+  1101&^1011==0100
+  ```
+  在a上清除b為1的位元，b不為1的位元xor
