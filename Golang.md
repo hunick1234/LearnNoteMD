@@ -100,3 +100,18 @@
   1101&^1011==0100
   ```
   在a上清除b為1的位元，b不為1的位元xor
+  
+- map in struct
+  
+   [click me](https://stackoverflow.com/questions/34972157/structure-with-nested-maps-golang)
+
+   ```go
+   type add struct {
+		cd map[int]int
+	}
+
+	ddd := &add{cd: map[int]int{}}   //init map !!
+
+	ddd.cd[4] = 5
+	fmt.Println(ddd)
+   ```
