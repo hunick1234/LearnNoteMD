@@ -33,7 +33,7 @@
       
       [unsafe包簡介 Golang中pointer的觀念](https://www.mdeditor.tw/pl/gr8H/zh-tw)
 
-      因為go強型別,所以無法直接進行指標操作(ex:數學運算,在使用unsafe包時,可以解除限制
+      go無法直接進行指標操作(ex:數學運算,在使用unsafe包時,可以解除限制
 
       ```go
       s:=1
