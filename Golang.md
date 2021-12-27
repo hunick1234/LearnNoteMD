@@ -59,6 +59,26 @@
       [Hugo 貼身打造個人部落格](https://ithelp.ithome.com.tw/users/20106430/ironman/3613)
 
 3. #### 小坑注意
+- 對於slice做切片需注意
+  ```go 
+  a:=[]int{1,2,3}
+  b:=a[:] //b=1,2,3
+  a[0]=5 //b=5,2,3
+  //or
+  b[0]=9 //a=9,2,3
+  ```
+
+  都是修改同個底層值
+
+  要不影響的話 要用append or copy的方式 
+  ```go 
+  s:=[]int{1,2,3}
+  s1 = append(s1, s[:]...)
+  s1[0]=55 //s=1,2,3
+
+  ```
+  
+
 - := 只能用於funciton內, 全域變數記得用var
    ```go
    var a int
