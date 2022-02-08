@@ -39,23 +39,21 @@
    [Angular 超入門學前幼幼班(一)](https://w3c.hexschool.com/blog/ece02e8d)下面有其他教學
 
    1. ReactJS
-
-   [React](https://zh-hant.reactjs.org/)
+    [React](https://zh-hant.reactjs.org/)
    
    2. ELECTRON
-
-   [ELECTRON](https://www.electronjs.org/docs)
+    [ELECTRON](https://www.electronjs.org/docs)
 
 
 ## 關於javaScript
 
-   [Javascript 動態網頁程式設計](http://dic.vbird.tw/javascript/unit02.php)
+-   [Javascript 動態網頁程式設計](http://dic.vbird.tw/javascript/unit02.php)
    
-   [JavaScript 教程](https://wangdoc.com/javascript/dom/nodelist.html)
+-   [JavaScript 教程](https://wangdoc.com/javascript/dom/nodelist.html)
 
-   [es6入門](https://es6.ruanyifeng.com/#docs/function)
+-   [es6入門](https://es6.ruanyifeng.com/#docs/function)
 
-   [w3school](http://www.w3big.com/zh-TW/js/js-if-else.html)
+-   [w3school](http://www.w3big.com/zh-TW/js/js-if-else.html)
 
    #### 回調函數
 
