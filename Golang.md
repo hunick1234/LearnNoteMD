@@ -1,6 +1,7 @@
 ### 關於Go
 
-   [Go設計與實現](https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-channel/)
+   [Go設計與實現](https://draveness.me/golang/docs/
+   part3-runtime/ch06-concurrency/golang-channel/)
 
    [用GO打造WEB應用](https://willh.gitbook.io/build-web-application-with-golang-zhtw/04.0)
 
